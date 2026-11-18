@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://tjr4kv7x5y4e"]
+
+[ext_resource type="Script" uid="uid://dhkjy4ipkjcal" path="res://escenas/inicio/inicio.gd" id="1_05qtm"]
+[ext_resource type="Texture2D" uid="uid://bvteqtrd2115g" path="res://assets/logo/SVR Studios.png" id="1_kvqhp"]
+
+[node name="Inicio" type="Node2D" unique_id=1735384376]
+script = ExtResource("1_05qtm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=523640103]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=1691412618]
+position = Vector2(557, 323.00006)
+scale = Vector2(0.28478965, 0.31853887)
+texture = ExtResource("1_kvqhp")

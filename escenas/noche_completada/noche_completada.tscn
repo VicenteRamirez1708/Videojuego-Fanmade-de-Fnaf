@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://kcrg62u63mbf"]
+
+[ext_resource type="FontFile" uid="uid://wr4rv0ciwath" path="res://assets/fonts/DS-DIGIT.TTF" id="1_5ekr4"]
+[ext_resource type="Script" uid="uid://besva06k4qv25" path="res://escenas/noche_completada/noche_completada.gd" id="1_ydtw7"]
+[ext_resource type="AudioStream" uid="uid://cqpcfqlrw4oum" path="res://assets/Audio/SoundTracks/6AM.wav" id="2_r4ei1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_5ekr4")
+font_size = 120
+
+[node name="NocheCompletada" type="Node2D" unique_id=793784996]
+script = ExtResource("1_ydtw7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1754577576]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=698056267]
+offset_left = 403.0
+offset_top = 254.0
+offset_right = 764.0
+offset_bottom = 375.0
+text = "6:00 AM"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2098339315]
+stream = ExtResource("2_r4ei1")

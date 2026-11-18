@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mglxpncognwq"
+path="res://.godot/imported/deep steps.wav-08f7fd1fade7b5b612fee8d479c2f61c.sample"
+
+[deps]
+
+source_file="res://assets/9-AUDIO/deep steps.wav"
+dest_files=["res://.godot/imported/deep steps.wav-08f7fd1fade7b5b612fee8d479c2f61c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

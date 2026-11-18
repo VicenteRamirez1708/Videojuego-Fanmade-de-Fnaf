@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://c51r4rq3hq0jn"]
+
+[ext_resource type="Texture2D" uid="uid://di6bqgqclym6o" path="res://assets/monitor/PcCamaras/ICAM_1.png" id="1_14o10"]
+[ext_resource type="Texture2D" uid="uid://d45ikiswb8sn" path="res://assets/monitor/PcCamaras/ICAM_2.png" id="2_nn3iv"]
+[ext_resource type="Texture2D" uid="uid://d11ycly5yh2ru" path="res://assets/monitor/PcCamaras/ICAM_3.png" id="3_cxqfa"]
+[ext_resource type="Texture2D" uid="uid://eapvsw2o7uox" path="res://assets/monitor/PcCamaras/ICAM_4.png" id="4_3wvp1"]
+[ext_resource type="Texture2D" uid="uid://dxffpu7x8td8s" path="res://assets/monitor/PcCamaras/ICAM_5.png" id="5_5vld4"]
+[ext_resource type="Texture2D" uid="uid://cufm4dag6aedx" path="res://assets/monitor/PcCamaras/ICAM_6.png" id="6_vnui0"]
+[ext_resource type="Texture2D" uid="uid://dhd2b6d6fg2x6" path="res://assets/monitor/PcCamaras/ICAM_7.png" id="7_416ho"]
+[ext_resource type="Texture2D" uid="uid://cwooy4nkwvbnr" path="res://assets/monitor/PcCamaras/ICAM_8.png" id="8_hdyy3"]
+[ext_resource type="Texture2D" uid="uid://d0gsoi35dhjn7" path="res://assets/monitor/PcCamaras/ICAM_9.png" id="9_vxkrs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_14o10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nn3iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cxqfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3wvp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5vld4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vnui0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_416ho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hdyy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vxkrs")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="monitor" type="Node2D" unique_id=2007684420]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=771657964]
+position = Vector2(576, 324.00003)
+scale = Vector2(0.6, 0.59999996)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame = 8
+frame_progress = 1.0

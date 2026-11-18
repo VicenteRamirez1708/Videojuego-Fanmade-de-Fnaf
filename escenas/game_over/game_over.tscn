@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dgglpdimnidmn"]
+
+[ext_resource type="Script" uid="uid://bq3a7r2v18ctf" path="res://escenas/game_over/game_over.gd" id="1_8uokb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gu1b3"]
+font_size = 62
+
+[node name="GameOver" type="Node2D" unique_id=426473340]
+script = ExtResource("1_8uokb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=570833259]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=2136972472]
+offset_left = 386.0
+offset_top = 244.0
+offset_right = 751.0
+offset_bottom = 332.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_gu1b3")

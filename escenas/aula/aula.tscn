@@ -1,0 +1,654 @@
+[gd_scene format=3 uid="uid://d3dy3kst1b7vj"]
+
+[ext_resource type="PackedScene" uid="uid://dl7mtvggwlhju" path="res://escenas/aula/der.tscn" id="1_522sc"]
+[ext_resource type="Script" uid="uid://c656xvvam1q4p" path="res://escenas/aula/aula.gd" id="1_hjtgq"]
+[ext_resource type="PackedScene" uid="uid://6wqwuhkmq7te" path="res://escenas/aula/izq.tscn" id="2_hjtgq"]
+[ext_resource type="PackedScene" uid="uid://bjk8ch1ksrqgb" path="res://escenas/aula/frent.tscn" id="3_yhjp5"]
+[ext_resource type="PackedScene" uid="uid://cl6k2rn0met0x" path="res://escenas/aula/armario.tscn" id="5_mlu6n"]
+[ext_resource type="AudioStream" uid="uid://drur3u5374vs6" path="res://assets/Audio/ambience2.wav" id="5_yhjp5"]
+[ext_resource type="Script" uid="uid://bp3fja0sh087j" path="res://escenas/aula/control_ia.gd" id="6_6okyd"]
+[ext_resource type="Texture2D" uid="uid://2gehu0msd5rf" path="res://assets/Camaras/Piso2/Vacias/1B_V.png" id="6_uv57b"]
+[ext_resource type="Script" uid="uid://dcm4xhsg23h3k" path="res://escenas/aula/control_anim/IA/ia_whites.gd" id="6_v4req"]
+[ext_resource type="Texture2D" uid="uid://k7822ydr8lo1" path="res://assets/Camaras/Piso2/Ocupadas/1B_S1.png" id="7_kil45"]
+[ext_resource type="Script" uid="uid://3gyc1r5qw8j2" path="res://escenas/aula/ia_stair.gd" id="7_y4fp4"]
+[ext_resource type="Texture2D" uid="uid://b156cib2susgp" path="res://assets/Camaras/Piso2/Ocupadas/1B_WS2.png" id="8_dirf1"]
+[ext_resource type="Texture2D" uid="uid://bvgodsvvsrpjk" path="res://assets/Camaras/Piso2/Ocupadas/1B_W.png" id="9_5abqk"]
+[ext_resource type="Texture2D" uid="uid://csx4byl13tsvu" path="res://assets/animatronicos/whites/jumpscare/0001.png" id="12_1el3b"]
+[ext_resource type="Texture2D" uid="uid://bwm0yucusrbtx" path="res://assets/animatronicos/whites/jumpscare/0002.png" id="13_lop53"]
+[ext_resource type="Script" uid="uid://bi320gkj6asg7" path="res://escenas/aula/sistema_energia.gd" id="14_camn3"]
+[ext_resource type="Texture2D" uid="uid://oonmou7b4yqw" path="res://assets/mapa/usage_bar/1.png" id="14_gmvjf"]
+[ext_resource type="Texture2D" uid="uid://d1mgynt65ds8" path="res://assets/animatronicos/whites/jumpscare/0003.png" id="14_uv57b"]
+[ext_resource type="Texture2D" uid="uid://ktnqkwlh31fm" path="res://assets/mapa/usage_bar/2.png" id="15_camn3"]
+[ext_resource type="Texture2D" uid="uid://c11mko5eytgag" path="res://assets/animatronicos/whites/jumpscare/0004.png" id="15_kil45"]
+[ext_resource type="Texture2D" uid="uid://b2qx3hanx4ms5" path="res://assets/mapa/usage_bar/3.png" id="16_4oyo5"]
+[ext_resource type="Texture2D" uid="uid://c5kpk3tewflof" path="res://assets/animatronicos/whites/jumpscare/0005.png" id="16_dirf1"]
+[ext_resource type="Texture2D" uid="uid://cgoctwvq3byw8" path="res://assets/animatronicos/whites/jumpscare/0006.png" id="17_5abqk"]
+[ext_resource type="Texture2D" uid="uid://dufsjuf542cjq" path="res://assets/mapa/usage_bar/4.png" id="17_edvdy"]
+[ext_resource type="Texture2D" uid="uid://dscdqtkxvhpr1" path="res://assets/animatronicos/whites/jumpscare/0007.png" id="18_flm7g"]
+[ext_resource type="FontFile" uid="uid://bacsukda72ltn" path="res://assets/fonts/FieldGuide.ttf" id="18_r2hd6"]
+[ext_resource type="Texture2D" uid="uid://uiiwgxc78tce" path="res://assets/animatronicos/whites/jumpscare/0008.png" id="19_wmf0e"]
+[ext_resource type="Script" uid="uid://dn6is74geyu8v" path="res://escenas/aula/sistema_noche.gd" id="20_4oyo5"]
+[ext_resource type="Texture2D" uid="uid://3xy8ji46hxri" path="res://assets/animatronicos/whites/jumpscare/0009.png" id="20_qws54"]
+[ext_resource type="Texture2D" uid="uid://hau42l5y3xdj" path="res://assets/animatronicos/whites/jumpscare/0010.png" id="21_8xfo0"]
+[ext_resource type="Texture2D" uid="uid://b8opve67oq1ha" path="res://assets/animatronicos/whites/jumpscare/0011.png" id="22_sbb4l"]
+[ext_resource type="Texture2D" uid="uid://dk74e0uisd5pt" path="res://assets/animatronicos/whites/jumpscare/0012.png" id="23_8y3i4"]
+[ext_resource type="Texture2D" uid="uid://dabgbacwa7vjk" path="res://assets/animatronicos/whites/jumpscare/0013.png" id="24_7cafc"]
+[ext_resource type="Texture2D" uid="uid://cymvxjqrdgy7c" path="res://assets/animatronicos/whites/jumpscare/0014.png" id="25_t2sks"]
+[ext_resource type="Texture2D" uid="uid://b8wollgwo1tmj" path="res://assets/animatronicos/whites/jumpscare/0015.png" id="26_qysx4"]
+[ext_resource type="Texture2D" uid="uid://cbm1ehhsm4rom" path="res://assets/animatronicos/whites/jumpscare/0016.png" id="27_1jbnw"]
+[ext_resource type="Texture2D" uid="uid://cjff71ujr4h7n" path="res://assets/animatronicos/whites/jumpscare/0017.png" id="28_fsbcs"]
+[ext_resource type="Texture2D" uid="uid://dtk36o0wnml1q" path="res://assets/animatronicos/whites/jumpscare/0018.png" id="29_eyto8"]
+[ext_resource type="Texture2D" uid="uid://drq6xlbl3u3y5" path="res://assets/animatronicos/whites/jumpscare/0019.png" id="30_0q2yk"]
+[ext_resource type="Texture2D" uid="uid://ckupm6euhsr78" path="res://assets/animatronicos/whites/jumpscare/0020.png" id="31_u287u"]
+[ext_resource type="AudioStream" uid="uid://bqpdwd0e1oanc" path="res://assets/animatronicos/whites/sound/jumpscare_whites.wav" id="32_lop53"]
+[ext_resource type="Texture2D" uid="uid://f8bd7qiome8f" path="res://assets/animatronicos/stair/jumpscare/0001.png" id="34_syqr5"]
+[ext_resource type="Texture2D" uid="uid://bsj02rsmhtp33" path="res://assets/animatronicos/stair/jumpscare/0002.png" id="35_i83e1"]
+[ext_resource type="Texture2D" uid="uid://c1pscceu81t8y" path="res://assets/animatronicos/stair/jumpscare/0003.png" id="36_ixs52"]
+[ext_resource type="Texture2D" uid="uid://baub07sik87yg" path="res://assets/animatronicos/stair/jumpscare/0004.png" id="37_ge66n"]
+[ext_resource type="Texture2D" uid="uid://bn0n2842jxlwh" path="res://assets/animatronicos/stair/jumpscare/0005.png" id="38_udioi"]
+[ext_resource type="Texture2D" uid="uid://ctaw8hg8rnmy0" path="res://assets/animatronicos/stair/jumpscare/0006.png" id="39_en1bp"]
+[ext_resource type="Texture2D" uid="uid://c56yccn0xhgef" path="res://assets/animatronicos/stair/jumpscare/0007.png" id="40_2w1vh"]
+[ext_resource type="Texture2D" uid="uid://xegl6jp2q4de" path="res://assets/animatronicos/stair/jumpscare/0008.png" id="41_4v26l"]
+[ext_resource type="Texture2D" uid="uid://hlqpabj8mceo" path="res://assets/animatronicos/stair/jumpscare/0009.png" id="42_1xe3x"]
+[ext_resource type="PackedScene" uid="uid://ia04j81bvbh8" path="res://escenas/transicion/transicion_negro.tscn" id="42_uv57b"]
+[ext_resource type="Texture2D" uid="uid://cy0ffy1k0l067" path="res://assets/animatronicos/stair/jumpscare/0010.png" id="43_axpv0"]
+[ext_resource type="Texture2D" uid="uid://ca8oxfxaqpy4v" path="res://assets/animatronicos/stair/jumpscare/0011.png" id="44_ibypb"]
+[ext_resource type="Texture2D" uid="uid://cfvj5h54buod8" path="res://assets/animatronicos/stair/jumpscare/0012.png" id="45_78luf"]
+[ext_resource type="Texture2D" uid="uid://c5ra1hkmfcqcd" path="res://assets/animatronicos/stair/jumpscare/0013.png" id="46_0jlxu"]
+[ext_resource type="Texture2D" uid="uid://c6ut4l03yfp1h" path="res://assets/animatronicos/stair/jumpscare/0014.png" id="47_pbiwu"]
+[ext_resource type="Texture2D" uid="uid://csytoji3kps8v" path="res://assets/animatronicos/stair/jumpscare/0015.png" id="48_diqyb"]
+[ext_resource type="Texture2D" uid="uid://cdvq2qmclm72c" path="res://assets/animatronicos/stair/jumpscare/0016.png" id="49_d2j3x"]
+[ext_resource type="Texture2D" uid="uid://de8sjwghc10iw" path="res://assets/animatronicos/stair/jumpscare/0017.png" id="50_3dht7"]
+[ext_resource type="Texture2D" uid="uid://mhctw1gl5ikc" path="res://assets/animatronicos/stair/jumpscare/0018.png" id="51_sicb2"]
+[ext_resource type="Texture2D" uid="uid://drd0ogqyd0fgm" path="res://assets/animatronicos/stair/jumpscare/0019.png" id="52_12i2p"]
+[ext_resource type="Texture2D" uid="uid://bpcylukpblhin" path="res://assets/animatronicos/stair/jumpscare/0020.png" id="53_tr61l"]
+[ext_resource type="AudioStream" uid="uid://c45vmo2w3m1rh" path="res://assets/animatronicos/stair/sound/jumpscare_stair.wav" id="54_i83e1"]
+[ext_resource type="Script" uid="uid://bthhnerki3r21" path="res://escenas/aula/ia_forkor.gd" id="55_ixs52"]
+[ext_resource type="Texture2D" uid="uid://dfxrkfybt66a0" path="res://assets/animatronicos/forkor/jumpscare/0001.png" id="56_62dkl"]
+[ext_resource type="Texture2D" uid="uid://cuvrqkair2ieq" path="res://assets/animatronicos/forkor/jumpscare/0002.png" id="57_r0i6b"]
+[ext_resource type="Texture2D" uid="uid://bafqiu6x2l1mx" path="res://assets/animatronicos/forkor/jumpscare/0003.png" id="58_2oijb"]
+[ext_resource type="Texture2D" uid="uid://chbkn742kyot5" path="res://assets/animatronicos/forkor/jumpscare/0004.png" id="59_sl5oh"]
+[ext_resource type="Texture2D" uid="uid://c2edcsn4mypmi" path="res://assets/animatronicos/forkor/jumpscare/0005.png" id="60_jgxbd"]
+[ext_resource type="Texture2D" uid="uid://do1lmwxr0r0s2" path="res://assets/animatronicos/forkor/jumpscare/0006.png" id="61_5x26x"]
+[ext_resource type="Texture2D" uid="uid://cglec61ovqrj6" path="res://assets/animatronicos/forkor/jumpscare/0007.png" id="62_euwyy"]
+[ext_resource type="Texture2D" uid="uid://djbsvuwxcqiki" path="res://assets/animatronicos/forkor/jumpscare/0008.png" id="63_1n3x8"]
+[ext_resource type="Texture2D" uid="uid://cuuqkovnmqd6l" path="res://assets/animatronicos/forkor/jumpscare/0009.png" id="64_aa1ae"]
+[ext_resource type="Texture2D" uid="uid://bael7u63fokpg" path="res://assets/animatronicos/forkor/jumpscare/0010.png" id="65_ajdjo"]
+[ext_resource type="Texture2D" uid="uid://bgirbu3rv1lq0" path="res://assets/animatronicos/forkor/jumpscare/0011.png" id="66_nlqi0"]
+[ext_resource type="Texture2D" uid="uid://djvn6h6acfrg2" path="res://assets/animatronicos/forkor/jumpscare/0012.png" id="67_iie2g"]
+[ext_resource type="Texture2D" uid="uid://dr04553djb5ah" path="res://assets/animatronicos/forkor/jumpscare/0013.png" id="68_g57sb"]
+[ext_resource type="Texture2D" uid="uid://cfthg2oudbodl" path="res://assets/animatronicos/forkor/jumpscare/0014.png" id="69_kbqya"]
+[ext_resource type="Texture2D" uid="uid://dbriy53p3qj0m" path="res://assets/animatronicos/forkor/jumpscare/0015.png" id="70_uvfev"]
+[ext_resource type="Texture2D" uid="uid://dh4p3dnmsyfqu" path="res://assets/animatronicos/forkor/jumpscare/0016.png" id="71_fkfyy"]
+[ext_resource type="Texture2D" uid="uid://strux6dp08eq" path="res://assets/animatronicos/forkor/jumpscare/0017.png" id="72_fbrn6"]
+[ext_resource type="Texture2D" uid="uid://pv4804ckewjt" path="res://assets/animatronicos/forkor/jumpscare/0018.png" id="73_es3ru"]
+[ext_resource type="Texture2D" uid="uid://dh5deuswomlh4" path="res://assets/animatronicos/forkor/jumpscare/0019.png" id="74_ckek0"]
+[ext_resource type="Texture2D" uid="uid://4whfd0tj8brl" path="res://assets/animatronicos/forkor/jumpscare/0020.png" id="75_ij61i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dvvmi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_uv57b")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_kil45")
+}],
+"loop": 1,
+"name": &"stair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dirf1")
+}],
+"loop": 1,
+"name": &"stair_whites",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5abqk")
+}],
+"loop": 1,
+"name": &"whites",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4oyo5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_1el3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lop53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_uv57b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kil45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dirf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5abqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_flm7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wmf0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qws54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8xfo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sbb4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8y3i4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7cafc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_t2sks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qysx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1jbnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_fsbcs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_eyto8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_0q2yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_u287u")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_syqr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_i83e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ixs52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ge66n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_udioi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_en1bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_2w1vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4v26l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_1xe3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_axpv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ibypb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_78luf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0jlxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_pbiwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_diqyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_d2j3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_3dht7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_sicb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_12i2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_tr61l")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_62dkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_r0i6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_2oijb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_sl5oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_jgxbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_5x26x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_euwyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_1n3x8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_aa1ae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ajdjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_nlqi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_iie2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_g57sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_kbqya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_uvfev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_fkfyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_fbrn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_es3ru")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ckek0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_ij61i")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_gmvjf")
+}],
+"loop": 1,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_camn3")
+}],
+"loop": 1,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4oyo5")
+}],
+"loop": 1,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_edvdy")
+}],
+"loop": 1,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("18_r2hd6")
+font_size = 26
+
+[node name="Aula" type="Node2D" unique_id=1495083356]
+script = ExtResource("1_hjtgq")
+
+[node name="armario" parent="." unique_id=1149823360 instance=ExtResource("5_mlu6n")]
+
+[node name="der" parent="." unique_id=444204591 instance=ExtResource("1_522sc")]
+
+[node name="izq" parent="." unique_id=1971006966 instance=ExtResource("2_hjtgq")]
+
+[node name="frent" parent="." unique_id=51489153 instance=ExtResource("3_yhjp5")]
+
+[node name="AnimatedSprite2D" parent="frent/camaras/control_anim/pasilloB" parent_id_path=PackedInt32Array(51489153, 606052587, 2039800173) index="0" unique_id=1233008513]
+sprite_frames = SubResource("SpriteFrames_dvvmi")
+animation = &"default"
+
+[node name="AnimatedSprite2D" parent="frent/camaras/control_anim/centroB" parent_id_path=PackedInt32Array(51489153, 606052587, 327666283) index="0" unique_id=1233008513]
+animation = &"whites"
+
+[node name="controlIA" type="Node" parent="frent/camaras/control_anim" parent_id_path=PackedInt32Array(51489153, 606052587) index="17" unique_id=537927549]
+script = ExtResource("6_6okyd")
+
+[node name="IA_Whites" type="Node" parent="frent/camaras/control_anim/controlIA" unique_id=283164076]
+script = ExtResource("6_v4req")
+
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1085207512]
+wait_time = 5.0
+autostart = true
+
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1337262588]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_4oyo5")
+frame = 23
+frame_progress = 1.0
+
+[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1109760932]
+stream = ExtResource("32_lop53")
+volume_db = 24.0
+
+[node name="IA_Stair" type="Node" parent="frent/camaras/control_anim/controlIA" unique_id=289119311]
+script = ExtResource("7_y4fp4")
+
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=223972993]
+wait_time = 5.0
+autostart = true
+
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=1529318669]
+visible = false
+position = Vector2(576.00006, 324)
+scale = Vector2(0.6, 0.6000001)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+frame = 27
+frame_progress = 1.0
+
+[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=1837538863]
+stream = ExtResource("54_i83e1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="frent/camaras/control_anim/controlIA" unique_id=1674168191]
+
+[node name="IA_Forkor" type="Node" parent="frent/camaras/control_anim/controlIA/CanvasLayer" unique_id=1601127597]
+script = ExtResource("55_ixs52")
+
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/CanvasLayer/IA_Forkor" unique_id=1952216579]
+autostart = true
+
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/CanvasLayer/IA_Forkor" unique_id=1763351719]
+visible = false
+position = Vector2(575.99994, 324.00006)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+frame = 27
+frame_progress = 1.0
+
+[node name="Ambiente" type="AudioStreamPlayer2D" parent="." unique_id=1065023109]
+stream = ExtResource("5_yhjp5")
+
+[node name="vista" type="CanvasLayer" parent="." unique_id=1965052714]
+
+[node name="sistema_energia" type="Node2D" parent="vista" unique_id=1170193332]
+script = ExtResource("14_camn3")
+
+[node name="bateria" type="AnimatedSprite2D" parent="vista/sistema_energia" unique_id=1650241159]
+position = Vector2(142, 566)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"1"
+
+[node name="Timer" type="Timer" parent="vista/sistema_energia/bateria" unique_id=1489643313]
+wait_time = 5.0
+autostart = true
+
+[node name="USANDO" type="Label" parent="vista/sistema_energia" unique_id=826786973]
+offset_left = 25.0
+offset_top = 556.0
+offset_right = 207.0
+offset_bottom = 629.0
+text = "USANDO:"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="RESTANTE" type="Label" parent="vista/sistema_energia" unique_id=1212331456]
+offset_left = 25.0
+offset_top = 506.0
+offset_right = 261.0
+offset_bottom = 538.0
+text = "RESTANTE:"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="digito1" type="Label" parent="vista/sistema_energia" unique_id=1828639569]
+offset_left = 135.0
+offset_top = 506.0
+offset_right = 164.0
+offset_bottom = 577.0
+text = "9"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="digito2" type="Label" parent="vista/sistema_energia" unique_id=1624242667]
+offset_left = 148.0
+offset_top = 506.0
+offset_right = 177.0
+offset_bottom = 577.0
+text = "9"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="porcentaje" type="Label" parent="vista/sistema_energia" unique_id=1147354384]
+offset_left = 162.0
+offset_top = 506.0
+offset_right = 193.0
+offset_bottom = 577.0
+text = "%"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="oscuro" type="ColorRect" parent="vista/sistema_energia" unique_id=913445761]
+visible = false
+offset_right = 1153.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="sistema_noche" type="Node2D" parent="vista" unique_id=448820445]
+script = ExtResource("20_4oyo5")
+
+[node name="hora" type="Timer" parent="vista/sistema_noche" unique_id=1084991071]
+wait_time = 45.0
+autostart = true
+
+[node name="NOCHE" type="Label" parent="vista/sistema_noche" unique_id=615951967]
+offset_left = 1053.0
+offset_top = -5.0
+offset_right = 1192.0
+offset_bottom = 66.0
+text = "NOCHE"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="digito_noche" type="Label" parent="vista/sistema_noche" unique_id=750747316]
+offset_left = 1119.0
+offset_top = -5.0
+offset_right = 1258.0
+offset_bottom = 66.0
+text = "1"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="digito_hora" type="Label" parent="vista/sistema_noche" unique_id=172074820]
+offset_left = 1075.0
+offset_top = 21.0
+offset_right = 1214.0
+offset_bottom = 92.0
+text = "12"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="AM" type="Label" parent="vista/sistema_noche" unique_id=511461331]
+offset_left = 1106.0
+offset_top = 21.0
+offset_right = 1245.0
+offset_bottom = 92.0
+text = "AM"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="TransicionNegro" parent="." unique_id=134365581 instance=ExtResource("42_uv57b")]
+
+[connection signal="button_down" from="izq/boton/btn_luz" to="frent/camaras/control_anim/controlIA/IA_Whites" method="_on_btn_luz_button_down"]
+[connection signal="timeout" from="frent/camaras/control_anim/controlIA/IA_Whites/Timer" to="frent/camaras/control_anim/controlIA/IA_Whites" method="_on_timer_timeout"]
+[connection signal="timeout" from="frent/camaras/control_anim/controlIA/IA_Stair/Timer" to="frent/camaras/control_anim/controlIA/IA_Stair" method="_on_timer_timeout"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent1A/vent1A" to="frent/camaras/control_anim" method="_on_vent_1a_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent2A/vent2A" to="frent/camaras/control_anim" method="_on_vent_2a_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent1B/vent1B" to="frent/camaras/control_anim" method="_on_vent_1b_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent2B/vent2B" to="frent/camaras/control_anim" method="_on_vent_2b_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent1C/vent1C" to="frent/camaras/control_anim" method="_on_vent_1c_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent2C/vent2C" to="frent/camaras/control_anim" method="_on_vent_2c_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close1A/vent_close1A" to="frent/camaras/control_anim" method="_on_vent_close_1a_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close2A/vent_close2A" to="frent/camaras/control_anim" method="_on_vent_close_2a_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close1B/vent_close1B" to="frent/camaras/control_anim" method="_on_vent_close_1b_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close2B/vent_close2B" to="frent/camaras/control_anim" method="_on_vent_close_2b_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close1C/vent_close1C" to="frent/camaras/control_anim" method="_on_vent_close_1c_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/botones/vent_close2C/vent_close2C" to="frent/camaras/control_anim" method="_on_vent_close_2c_pressed"]
+[connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/botones/vent/vent" to="frent/camaras/control_anim" method="_on_vent_pressed"]
+[connection signal="timeout" from="vista/sistema_noche/hora" to="vista/sistema_noche" method="_on_hora_timeout"]
+
+[editable path="armario"]
+[editable path="der"]
+[editable path="izq"]
+[editable path="frent"]
+[editable path="frent/camaras/monitor"]
+[editable path="frent/camaras/control_anim"]
+[editable path="frent/camaras/control_anim/auditorio"]
+[editable path="frent/camaras/control_anim/pasilloA"]
+[editable path="frent/camaras/control_anim/centroA"]
+[editable path="frent/camaras/control_anim/baños"]
+[editable path="frent/camaras/control_anim/cubiculosA"]
+[editable path="frent/camaras/control_anim/pasilloB"]
+[editable path="frent/camaras/control_anim/centroB"]
+[editable path="frent/camaras/control_anim/salon"]
+[editable path="frent/camaras/control_anim/cubiculosB"]
+[editable path="frent/camaras/control_anim/escaleras"]
+[editable path="frent/camaras/control_anim/vent2A"]
+[editable path="frent/camaras/control_anim/vent1B"]
+[editable path="frent/camaras/control_anim/vent2B"]
+[editable path="frent/camaras/control_anim/vent1C"]
+[editable path="frent/camaras/mapa"]

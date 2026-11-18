@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ba24g1ubwbn4u"]
+
+[ext_resource type="Script" uid="uid://bad4aurw2veou" path="res://escenas/aula/control_anim/camaras.gd" id="1_xsfsw"]
+[ext_resource type="Texture2D" uid="uid://ciqfw8t6qy64f" path="res://assets/6-CAMERAS/1-STAGE.png" id="2_xsfsw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3tdj7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xsfsw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="camaras" type="Node2D" unique_id=2039800173]
+script = ExtResource("1_xsfsw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1233008513]
+position = Vector2(575.7373, 327)
+scale = Vector2(0.8832204, 0.9027778)
+sprite_frames = SubResource("SpriteFrames_3tdj7")

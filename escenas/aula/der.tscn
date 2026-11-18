@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://dl7mtvggwlhju"]
+
+[ext_resource type="Script" uid="uid://b60wo31l8ix4k" path="res://escenas/aula/der.gd" id="1_mwogo"]
+[ext_resource type="Texture2D" uid="uid://bqnjfjne8u62s" path="res://assets/Escritorio Frames/Armario/IAR_9.png" id="2_8b1y6"]
+[ext_resource type="Texture2D" uid="uid://dx0qiah7ghc7k" path="res://assets/Escritorio Frames/Armario/IAR_8.png" id="3_i6shu"]
+[ext_resource type="Texture2D" uid="uid://b2ovxmixnvfn2" path="res://assets/Escritorio Frames/Armario/IAR_7.png" id="4_rinqp"]
+[ext_resource type="Texture2D" uid="uid://dxcy6ixc21n5g" path="res://assets/Escritorio Frames/Armario/IAR_6.png" id="5_5ivge"]
+[ext_resource type="Texture2D" uid="uid://c3511h5u5xe2f" path="res://assets/Escritorio Frames/Armario/IAR_5.png" id="6_qwk1g"]
+[ext_resource type="Texture2D" uid="uid://d2biom1tijag6" path="res://assets/Escritorio Frames/Armario/IAR_4.png" id="7_aygyy"]
+[ext_resource type="Texture2D" uid="uid://cjw1q2fl30mbs" path="res://assets/Escritorio Frames/Armario/IAR_3.png" id="8_bnc54"]
+[ext_resource type="Texture2D" uid="uid://cm7euxvlgfqk1" path="res://assets/Escritorio Frames/Armario/IAR_2.png" id="9_47dvw"]
+[ext_resource type="Texture2D" uid="uid://b4qltigiy1kxa" path="res://assets/Escritorio Frames/Armario/IAR_1.png" id="10_3vnpl"]
+[ext_resource type="Texture2D" uid="uid://bqjjvqiqbg35r" path="res://assets/Escritorio Frames/Escritorio.png" id="11_dmjkr"]
+[ext_resource type="Texture2D" uid="uid://bdgpmn6jmuep4" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_1.png" id="12_dmjkr"]
+[ext_resource type="Texture2D" uid="uid://bg2488upskulf" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_2.png" id="13_4kcg8"]
+[ext_resource type="Texture2D" uid="uid://dhuquykls3vof" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_3.png" id="14_xm8yt"]
+[ext_resource type="Texture2D" uid="uid://cvly2uqe2pfto" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_4.png" id="15_oc0jc"]
+[ext_resource type="Texture2D" uid="uid://ccnvl8inyx041" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_5.png" id="16_t744k"]
+[ext_resource type="Texture2D" uid="uid://dssxd2wtixvdx" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_6.png" id="17_te8hg"]
+[ext_resource type="Texture2D" uid="uid://c1e3uloph7cjo" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_7.png" id="18_q742u"]
+[ext_resource type="Texture2D" uid="uid://4v8fdshfjkgi" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_8.png" id="19_6hfhb"]
+[ext_resource type="Texture2D" uid="uid://da16lvo44ueqg" path="res://assets/Escritorio Frames/Armario_Esconderse/IAMR_9.png" id="20_khjwf"]
+[ext_resource type="AudioStream" uid="uid://dxptf1spowp2a" path="res://assets/Audio/Sounds/running fast3.wav" id="21_4kcg8"]
+[ext_resource type="AudioStream" uid="uid://didsdl6a2waue" path="res://assets/Audio/Sounds/armario.wav" id="22_xm8yt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(91.25, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8b1y6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8b1y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i6shu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rinqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5ivge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qwk1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_aygyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bnc54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_47dvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3vnpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dmjkr")
+}],
+"loop": 0,
+"name": &"der_frent",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_dmjkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4kcg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xm8yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_oc0jc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_t744k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_te8hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q742u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6hfhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_khjwf")
+}],
+"loop": 0,
+"name": &"esconderse",
+"speed": 12.0
+}]
+
+[node name="der" type="Node2D" unique_id=444204591]
+script = ExtResource("1_mwogo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1477108406]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=229287983]
+position = Vector2(45.625, 324)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Animaciones" type="Node2D" parent="." unique_id=89838132]
+
+[node name="der" type="AnimatedSprite2D" parent="Animaciones" unique_id=900561857]
+position = Vector2(576, 324)
+scale = Vector2(0.59999996, 0.5999999)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[node name="der_frent" type="AnimatedSprite2D" parent="Animaciones" unique_id=459956017]
+visible = false
+position = Vector2(576, 324.00003)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+animation = &"der_frent"
+
+[node name="armario" type="AnimatedSprite2D" parent="Animaciones" unique_id=421316414]
+visible = false
+position = Vector2(576, 325)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+animation = &"esconderse"
+
+[node name="Button" type="Button" parent="." unique_id=1515544983]
+offset_left = 679.0
+offset_top = 71.0
+offset_right = 900.0
+offset_bottom = 465.0
+flat = true
+
+[node name="sonidos" type="Node2D" parent="." unique_id=501246250]
+
+[node name="correr" type="AudioStreamPlayer2D" parent="sonidos" unique_id=261816664]
+stream = ExtResource("21_4kcg8")
+pitch_scale = 1.45
+
+[node name="armario" type="AudioStreamPlayer2D" parent="sonidos" unique_id=984000821]
+stream = ExtResource("22_xm8yt")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

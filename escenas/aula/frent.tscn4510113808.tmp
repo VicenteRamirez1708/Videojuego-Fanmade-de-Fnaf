@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://bjk8ch1ksrqgb"]
+
+[ext_resource type="Script" uid="uid://co2uqwypb7h2o" path="res://escenas/aula/frent.gd" id="1_nd0lq"]
+[ext_resource type="Texture2D" uid="uid://bqjjvqiqbg35r" path="res://assets/Escritorio Frames/Escritorio.png" id="2_tqx2l"]
+[ext_resource type="Texture2D" uid="uid://k0m1qwcvxoc" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_1.png" id="3_ikwn0"]
+[ext_resource type="Texture2D" uid="uid://c6k0r8hooc0d" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_2.png" id="4_pgo0m"]
+[ext_resource type="Texture2D" uid="uid://j4hg2hjecwxc" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_3.png" id="5_46mdg"]
+[ext_resource type="Texture2D" uid="uid://duyq15eybq77l" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_4.png" id="6_o24o1"]
+[ext_resource type="Texture2D" uid="uid://c4khsy10g0sp0" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_5.png" id="7_gjfm3"]
+[ext_resource type="Texture2D" uid="uid://w2ps18w4t3w6" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_6.png" id="8_q26lo"]
+[ext_resource type="Texture2D" uid="uid://r0pgsf5dfva5" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_7.png" id="9_cvlr5"]
+[ext_resource type="Texture2D" uid="uid://4utm1uf1b8ff" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_8.png" id="10_7bp2q"]
+[ext_resource type="Texture2D" uid="uid://djcsamud61ffa" path="res://assets/Escritorio Frames/Puerta_Cerrada/IPC_9.png" id="11_3dymx"]
+[ext_resource type="Texture2D" uid="uid://b4qltigiy1kxa" path="res://assets/Escritorio Frames/Armario/IAR_1.png" id="12_3dymx"]
+[ext_resource type="Texture2D" uid="uid://20is5f60uxel" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_1.png" id="12_ovs8e"]
+[ext_resource type="Texture2D" uid="uid://cm7euxvlgfqk1" path="res://assets/Escritorio Frames/Armario/IAR_2.png" id="13_sfwgd"]
+[ext_resource type="Texture2D" uid="uid://bvp3lqke8c2te" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_2.png" id="13_u2vsj"]
+[ext_resource type="Texture2D" uid="uid://bt265hu4frv78" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_3.png" id="14_4l32w"]
+[ext_resource type="Texture2D" uid="uid://cjw1q2fl30mbs" path="res://assets/Escritorio Frames/Armario/IAR_3.png" id="14_elabv"]
+[ext_resource type="Texture2D" uid="uid://d17ws6iotx1wk" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_4.png" id="15_66hqv"]
+[ext_resource type="Texture2D" uid="uid://d2biom1tijag6" path="res://assets/Escritorio Frames/Armario/IAR_4.png" id="15_hr8nk"]
+[ext_resource type="Texture2D" uid="uid://c3511h5u5xe2f" path="res://assets/Escritorio Frames/Armario/IAR_5.png" id="16_bmv4x"]
+[ext_resource type="Texture2D" uid="uid://85i8pr5duyr6" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_5.png" id="16_fvdu1"]
+[ext_resource type="Texture2D" uid="uid://dxcy6ixc21n5g" path="res://assets/Escritorio Frames/Armario/IAR_6.png" id="17_3cb1p"]
+[ext_resource type="Texture2D" uid="uid://ddoobpqcbihh0" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_6.png" id="17_crq03"]
+[ext_resource type="Texture2D" uid="uid://b2ovxmixnvfn2" path="res://assets/Escritorio Frames/Armario/IAR_7.png" id="18_dlvq6"]
+[ext_resource type="Texture2D" uid="uid://boyw0j0hvtbn5" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_7.png" id="18_oh42r"]
+[ext_resource type="Texture2D" uid="uid://dk5wfrw2usk0a" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_8.png" id="19_hqyha"]
+[ext_resource type="Texture2D" uid="uid://dx0qiah7ghc7k" path="res://assets/Escritorio Frames/Armario/IAR_8.png" id="19_xg5lo"]
+[ext_resource type="Texture2D" uid="uid://v01vn3tgmyt1" path="res://assets/Escritorio Frames/Puerta_Abierta/IPA_9.png" id="20_4xnbk"]
+[ext_resource type="Texture2D" uid="uid://bqnjfjne8u62s" path="res://assets/Escritorio Frames/Armario/IAR_9.png" id="20_aicg0"]
+[ext_resource type="Texture2D" uid="uid://cpkc4ydlvapwf" path="res://assets/0-STATIC/1.png" id="30_5g2ev"]
+[ext_resource type="PackedScene" uid="uid://cnphx5ex65bic" path="res://escenas/aula/mapa/mapa.tscn" id="31_fvdu1"]
+[ext_resource type="Texture2D" uid="uid://spb465d4vh7b" path="res://assets/0-STATIC/2.png" id="31_m8gq3"]
+[ext_resource type="Texture2D" uid="uid://c31ox5t55l8f6" path="res://assets/0-STATIC/3.png" id="32_3tdj7"]
+[ext_resource type="PackedScene" uid="uid://c51r4rq3hq0jn" path="res://escenas/aula/monitor/monitor.tscn" id="32_crq03"]
+[ext_resource type="Texture2D" uid="uid://1dfq5x62ww4m" path="res://assets/0-STATIC/4.png" id="33_26ggg"]
+[ext_resource type="Texture2D" uid="uid://dwnerrvb5sq4" path="res://assets/0-STATIC/5.png" id="34_j1jno"]
+[ext_resource type="Texture2D" uid="uid://cvpvh8xwib4m8" path="res://assets/0-STATIC/6.png" id="35_j5fv0"]
+[ext_resource type="Texture2D" uid="uid://bck4so6s8xkg1" path="res://assets/0-STATIC/7.png" id="36_jktsx"]
+[ext_resource type="Texture2D" uid="uid://daakkrf0pvvby" path="res://assets/0-STATIC/8.png" id="37_rhr65"]
+[ext_resource type="PackedScene" uid="uid://3sc3gmno2o33" path="res://escenas/aula/control_anim/control_anim.tscn" id="39_m8gq3"]
+[ext_resource type="Script" uid="uid://bnnanprihu5w6" path="res://escenas/aula/btn_cam.gd" id="41_m8gq3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(71.25, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tqx2l")
+}],
+"loop": 1,
+"name": &"frent",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ikwn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pgo0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_46mdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o24o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gjfm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q26lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cvlr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7bp2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3dymx")
+}],
+"loop": 0,
+"name": &"close",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ovs8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_u2vsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4l32w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_66hqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fvdu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_crq03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_oh42r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_hqyha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4xnbk")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 30.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tqx2l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_3dymx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sfwgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_elabv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hr8nk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_bmv4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3cb1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dlvq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xg5lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_aicg0")
+}],
+"loop": 0,
+"name": &"frent_der",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e6kaa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_5g2ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_m8gq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3tdj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_26ggg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_j1jno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_j5fv0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_jktsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_rhr65")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 25.0
+}]
+
+[node name="frent" type="Node2D" unique_id=51489153]
+script = ExtResource("1_nd0lq")
+
+[node name="detectores" type="Node2D" parent="." unique_id=967287942]
+
+[node name="izq" type="Area2D" parent="detectores" unique_id=726428506]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectores/izq" unique_id=841376552]
+position = Vector2(35, 323.875)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="der" type="Area2D" parent="detectores" unique_id=1983070779]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detectores/der" unique_id=1913479638]
+position = Vector2(1116.375, 324)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="animaciones" type="Node2D" parent="." unique_id=735512497]
+
+[node name="frent" type="AnimatedSprite2D" parent="animaciones" unique_id=2075224848]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"frent"
+
+[node name="frent_izq" type="AnimatedSprite2D" parent="animaciones" unique_id=297428323]
+visible = false
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.59999996)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+animation = &"close"
+
+[node name="frent_der" type="AnimatedSprite2D" parent="animaciones" unique_id=1370581455]
+visible = false
+position = Vector2(576, 324.00003)
+scale = Vector2(0.6, 0.59999996)
+sprite_frames = SubResource("SpriteFrames_tqx2l")
+animation = &"frent_der"
+
+[node name="estatica" type="AnimatedSprite2D" parent="animaciones" unique_id=348151249]
+modulate = Color(1, 1, 1, 0.19607843)
+position = Vector2(590.5, 337.5)
+scale = Vector2(0.26640624, 0.2597222)
+sprite_frames = SubResource("SpriteFrames_e6kaa")
+frame_progress = 0.07471037
+
+[node name="camaras" type="Node2D" parent="." unique_id=327440004]
+
+[node name="monitor" parent="camaras" unique_id=2007684420 instance=ExtResource("32_crq03")]
+visible = false
+
+[node name="control_anim" parent="camaras" unique_id=606052587 instance=ExtResource("39_m8gq3")]
+visible = false
+
+[node name="mapa" parent="camaras" unique_id=1633312089 instance=ExtResource("31_fvdu1")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1042150095]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=510803831]
+offset_left = 401.0
+offset_top = 232.0
+offset_right = 776.0
+offset_bottom = 454.0
+flat = true
+script = ExtResource("41_m8gq3")
+
+[connection signal="mouse_entered" from="detectores/izq" to="." method="_on_izq_mouse_entered"]
+[connection signal="mouse_entered" from="detectores/der" to="." method="_on_der_mouse_entered"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/pasilloB/pasilloB" to="camaras/control_anim" method="_on_pasillo_b_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/pasilloA/pasilloA" to="camaras/control_anim" method="_on_pasillo_a_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/centroB/centroB" to="camaras/control_anim" method="_on_centro_b_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/centroA/centroA" to="camaras/control_anim" method="_on_centro_a_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/escaleras/escaleras" to="camaras/control_anim" method="_on_escaleras_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/cubiculos/cubiculos" to="camaras/control_anim" method="_on_cubiculos_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/salon/salon" to="camaras/control_anim" method="_on_salon_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/salon2/salon2" to="camaras/control_anim" method="_on_salon_2_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/baños/baños" to="camaras/control_anim" method="_on_baños_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/auditorio/auditorio" to="camaras/control_anim" method="_on_auditorio_pressed"]
+[connection signal="pressed" from="camaras/mapa/CanvasLayer/afuera/afuera" to="camaras/control_anim" method="_on_afuera_pressed"]
+[connection signal="mouse_entered" from="camaras/mapa/CanvasLayer/salir_camaras" to="camaras/control_anim" method="_on_salir_camaras_mouse_entered"]
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_pressed"]
+
+[editable path="camaras/monitor"]
+[editable path="camaras/control_anim"]
+[editable path="camaras/control_anim/pasilloB"]
+[editable path="camaras/control_anim/pasilloA"]
+[editable path="camaras/control_anim/centroB"]
+[editable path="camaras/control_anim/centroA"]
+[editable path="camaras/control_anim/escaleras"]
+[editable path="camaras/control_anim/cubiculos"]
+[editable path="camaras/control_anim/salon"]
+[editable path="camaras/control_anim/salon2"]
+[editable path="camaras/control_anim/baños"]
+[editable path="camaras/control_anim/auditorio"]
+[editable path="camaras/control_anim/afuera"]
+[editable path="camaras/mapa"]

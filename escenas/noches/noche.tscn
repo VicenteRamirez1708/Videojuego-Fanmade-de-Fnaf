@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7jntkaa83bj0"]
+
+[ext_resource type="Script" uid="uid://gso7fj3piogw" path="res://escenas/noches/noche.gd" id="1_lshri"]
+[ext_resource type="PackedScene" uid="uid://d3dy3kst1b7vj" path="res://escenas/aula/aula.tscn" id="2_8d10o"]
+
+[node name="noche" type="Node2D" unique_id=1555717707]
+script = ExtResource("1_lshri")
+
+[node name="Aula" parent="." unique_id=1495083356 instance=ExtResource("2_8d10o")]

@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://bdq6hxlv38v81"]
+
+[ext_resource type="Script" uid="uid://db2qqp401qkuw" path="res://escenas/carga noche/carga_noche.gd" id="1_3d514"]
+[ext_resource type="FontFile" uid="uid://bacsukda72ltn" path="res://assets/fonts/FieldGuide.ttf" id="1_r81ya"]
+[ext_resource type="Texture2D" uid="uid://fv17vo5mffi6" path="res://assets/menu/blip/blip flash 10.png" id="2_3ubo5"]
+[ext_resource type="Texture2D" uid="uid://kw7628wpnfgf" path="res://assets/menu/blip/blip flash 11.png" id="3_3d514"]
+[ext_resource type="Texture2D" uid="uid://c488qtlodpwea" path="res://assets/menu/blip/blip flash 12.png" id="4_24fc7"]
+[ext_resource type="Texture2D" uid="uid://ccwtvikbe25x6" path="res://assets/menu/blip/blip flash 13.png" id="5_pt6m1"]
+[ext_resource type="Texture2D" uid="uid://dvf6nmhmcbjk" path="res://assets/menu/blip/blip flash 14.png" id="6_0gil7"]
+[ext_resource type="Texture2D" uid="uid://d3i2aorjod4vo" path="res://assets/menu/blip/blip flash 15.png" id="7_iftlm"]
+[ext_resource type="Texture2D" uid="uid://dwt8780xi3odt" path="res://assets/menu/blip/blip flash 16.png" id="8_tdl2n"]
+[ext_resource type="AudioStream" uid="uid://b1btuhxmpenpj" path="res://assets/Audio/SoundTracks/estatica2.wav" id="10_24fc7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("1_r81ya")
+font_size = 62
+
+[sub_resource type="LabelSettings" id="LabelSettings_yf5fn"]
+font = ExtResource("1_r81ya")
+font_size = 62
+
+[sub_resource type="LabelSettings" id="LabelSettings_57qmd"]
+font = ExtResource("1_r81ya")
+font_size = 62
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3ubo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3d514")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_24fc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pt6m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0gil7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iftlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tdl2n")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="CargaNoche" type="Node2D" unique_id=1087813888]
+script = ExtResource("1_3d514")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=936730538]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="12AM" type="Label" parent="." unique_id=1889717657]
+offset_left = 467.0
+offset_top = 209.0
+offset_right = 608.0
+offset_bottom = 284.0
+text = "12:00 AM"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="NOCHE" type="Label" parent="." unique_id=1976466938]
+offset_left = 466.0
+offset_top = 268.0
+offset_right = 615.0
+offset_bottom = 343.0
+text = "NOCHE"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="digito_noche" type="Label" parent="." unique_id=29996402]
+offset_left = 643.0
+offset_top = 268.0
+offset_right = 683.0
+offset_bottom = 343.0
+text = "1"
+label_settings = SubResource("LabelSettings_57qmd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1187373764]
+visible = false
+position = Vector2(576, 400.00003)
+scale = Vector2(0.90000004, 1.1111113)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame = 6
+frame_progress = 1.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=581239551]
+stream = ExtResource("10_24fc7")

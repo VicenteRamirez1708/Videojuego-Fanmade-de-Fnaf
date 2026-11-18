@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cpb680tj3eyp0"]
+
+[ext_resource type="Texture2D" uid="uid://cr5c1cjbembdm" path="res://assets/Start/reloj.png" id="1_asmtj"]
+[ext_resource type="Script" uid="uid://c1nlfr3fdixgw" path="res://escenas/pantalla_carga/pantalla_carga.gd" id="1_nu1c4"]
+
+[node name="PantallaCarga" type="Node2D" unique_id=559327583]
+script = ExtResource("1_nu1c4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=958985903]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1288171842]
+position = Vector2(1132, 629)
+scale = Vector2(1.7500043, 1.6250024)
+texture = ExtResource("1_asmtj")

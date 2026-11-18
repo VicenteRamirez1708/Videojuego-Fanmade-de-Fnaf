@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ctmklrp6gc31l"]
+
+[ext_resource type="Script" uid="uid://7osxbplo4xin" path="res://escenas/creditos/creditos.gd" id="1_jr4fe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+line_spacing = 8.0
+font_size = 11
+
+[node name="Creditos" type="Node2D" unique_id=1002672055]
+script = ExtResource("1_jr4fe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1522388472]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1812503148]
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 1152.0
+offset_bottom = 743.0
+text = "CREADO POR SVR STUDIOS
+
+DISEÑO Y ARTE
+
+DISEÑO DE PERSONAJES
+VICENTE
+REYLI
+
+MODELADO 3D
+REYLI
+
+MODELADO DE PERSONAJES
+REYLI
+VICENTE
+
+INTERFAZ Y EXPERIENCIA DE USUARIO
+VICENTE
+
+PROGRAMADOR 
+VICENTE
+
+DISEÑADOR DE SONIDOS
+SEBASTIAN LP
+
+BETA TESTERS 
+TU"
+label_settings = SubResource("LabelSettings_g4v7s")
+horizontal_alignment = 1

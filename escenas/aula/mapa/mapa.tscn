@@ -1,0 +1,642 @@
+[gd_scene format=3 uid="uid://cnphx5ex65bic"]
+
+[ext_resource type="Texture2D" uid="uid://74f26e6q1gbv" path="res://assets/mapa/cameras_P1.png" id="1_y67uh"]
+[ext_resource type="Texture2D" uid="uid://dcuyrm651cmcr" path="res://assets/6-CAMERAS/CAM_BUTTONS/CAM_PRESSED1 (animation or stopped).png" id="2_erexk"]
+[ext_resource type="Texture2D" uid="uid://5lfxtoyyp662" path="res://assets/mapa/botones_camaras/CAM_1A.png" id="3_hrmmp"]
+[ext_resource type="Texture2D" uid="uid://bush6xqwftvog" path="res://assets/6-CAMERAS/CAM_BUTTONS/CAM_PRESSED2 (switch animation sequence).png" id="4_hrmmp"]
+[ext_resource type="Texture2D" uid="uid://bpubtxony7olm" path="res://assets/mapa/botones_camaras/CAM_2A.png" id="5_284yy"]
+[ext_resource type="Texture2D" uid="uid://du4m3dt5pa66w" path="res://assets/mapa/botones_camaras/CAM_3A.png" id="6_ji62o"]
+[ext_resource type="Texture2D" uid="uid://bb5020iwgxsdi" path="res://assets/mapa/botones_camaras/CAM_4A.png" id="7_63rlx"]
+[ext_resource type="Texture2D" uid="uid://fgbcpc0ksh78" path="res://assets/mapa/botones_camaras/CAM_5A.png" id="8_v6rax"]
+[ext_resource type="Texture2D" uid="uid://dejvj830lruvl" path="res://assets/mapa/cameras_P2.png" id="9_erexk"]
+[ext_resource type="Texture2D" uid="uid://bnwo28mli5gm0" path="res://assets/mapa/botones_camaras/CAM_1B.png" id="10_lclgx"]
+[ext_resource type="Texture2D" uid="uid://dr6egeqedpq4x" path="res://assets/mapa/botones_camaras/CAM_2B.png" id="11_f5nly"]
+[ext_resource type="Texture2D" uid="uid://mwxnmo358ojm" path="res://assets/mapa/botones_camaras/CAM_3B.png" id="12_lifeq"]
+[ext_resource type="Texture2D" uid="uid://dscnsfk11uxad" path="res://assets/mapa/botones_camaras/CAM_4B.png" id="13_258q1"]
+[ext_resource type="Texture2D" uid="uid://bbo0dufcfvkhm" path="res://assets/mapa/botones_camaras/CAM_5.png" id="14_0jtun"]
+[ext_resource type="Texture2D" uid="uid://dttl22n5g5q5y" path="res://assets/Escritorio Frames/0-FLIP.png" id="15_erexk"]
+[ext_resource type="Texture2D" uid="uid://1tggajnrms2h" path="res://assets/mapa/vent.png" id="15_f5nly"]
+[ext_resource type="Texture2D" uid="uid://d322opy5osgd5" path="res://assets/mapa/botones/PISO1.png" id="16_hrmmp"]
+[ext_resource type="Texture2D" uid="uid://cund05gojw4up" path="res://assets/mapa/botones_camaras/VENT_1A.png" id="16_lifeq"]
+[ext_resource type="Texture2D" uid="uid://n8bgm36m8pug" path="res://assets/mapa/botones_camaras/VENT_2A.png" id="17_258q1"]
+[ext_resource type="Texture2D" uid="uid://cf3pivrq7fuwe" path="res://assets/mapa/botones/PISO2.png" id="17_284yy"]
+[ext_resource type="Texture2D" uid="uid://cva7r5oe3t150" path="res://assets/mapa/botones_camaras/VENT_1B.png" id="18_0jtun"]
+[ext_resource type="Texture2D" uid="uid://bxqb8hpwyidsb" path="res://assets/mapa/botones/VENT.png" id="18_284yy"]
+[ext_resource type="Texture2D" uid="uid://dbo4aric8c816" path="res://assets/mapa/botones_camaras/VENT_2B.png" id="19_a2lpo"]
+[ext_resource type="Texture2D" uid="uid://n878sydn83vq" path="res://assets/mapa/botones_camaras/VENT_1C.png" id="20_258q1"]
+[ext_resource type="Texture2D" uid="uid://da8lflmx2u1an" path="res://assets/mapa/botones_camaras/VENT_2C.png" id="21_0jtun"]
+[ext_resource type="Texture2D" uid="uid://d0ty88brsl7cx" path="res://assets/mapa/botones/VENT_CLOSE.png" id="22_0jtun"]
+[ext_resource type="AudioStream" uid="uid://kfljn0rdriin" path="res://assets/Audio/SoundTracks/Cambio de camara.wav" id="27_a2lpo"]
+
+[node name="mapa" type="Node2D" unique_id=1633312089]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=643007739]
+visible = false
+
+[node name="mapa_P1" type="Node2D" parent="CanvasLayer" unique_id=1563152685]
+
+[node name="mapa" type="Sprite2D" parent="CanvasLayer/mapa_P1" unique_id=2063024326]
+position = Vector2(888.87494, 493)
+scale = Vector2(0.5382681, 0.47386762)
+texture = ExtResource("1_y67uh")
+
+[node name="auditorio" type="Node2D" parent="CanvasLayer/mapa_P1" unique_id=562708537]
+position = Vector2(930, 429)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_P1/auditorio" unique_id=1977881920]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="auditorio" type="Button" parent="CanvasLayer/mapa_P1/auditorio" unique_id=951865427]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("3_hrmmp")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_P1/auditorio/auditorio" unique_id=399466145]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="pasilloA" type="Node2D" parent="CanvasLayer/mapa_P1" unique_id=582126129]
+position = Vector2(930, 468.00003)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_P1/pasilloA" unique_id=2045669022]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="pasilloA" type="Button" parent="CanvasLayer/mapa_P1/pasilloA" unique_id=565243991]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("5_284yy")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_P1/pasilloA/pasilloA" unique_id=471525959]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="centroA" type="Node2D" parent="CanvasLayer/mapa_P1" unique_id=320420591]
+position = Vector2(881, 468.00003)
+scale = Vector2(1, 0.9999998)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_P1/centroA" unique_id=192997869]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="centroA" type="Button" parent="CanvasLayer/mapa_P1/centroA" unique_id=10866164]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("6_ji62o")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_P1/centroA/centroA" unique_id=127876054]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="baños" type="Node2D" parent="CanvasLayer/mapa_P1" unique_id=617513751]
+position = Vector2(775, 525)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_P1/baños" unique_id=952185695]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="baños" type="Button" parent="CanvasLayer/mapa_P1/baños" unique_id=387103934]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("7_63rlx")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_P1/baños/baños" unique_id=1228639347]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="cubiculosA" type="Node2D" parent="CanvasLayer/mapa_P1" unique_id=965975229]
+position = Vector2(732, 395)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_P1/cubiculosA" unique_id=225050853]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="cubiculosA" type="Button" parent="CanvasLayer/mapa_P1/cubiculosA" unique_id=1384322711]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("8_v6rax")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_P1/cubiculosA/cubiculosA" unique_id=1097796683]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="mapa_p2" type="Node2D" parent="CanvasLayer" unique_id=2136708273]
+visible = false
+
+[node name="mapa" type="Sprite2D" parent="CanvasLayer/mapa_p2" unique_id=492535855]
+position = Vector2(888.87494, 493)
+scale = Vector2(0.5382681, 0.47386762)
+texture = ExtResource("9_erexk")
+
+[node name="pasilloB" type="Node2D" parent="CanvasLayer/mapa_p2" unique_id=760776690]
+position = Vector2(1061, 478.00003)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_p2/pasilloB" unique_id=1270583848]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="pasilloB" type="Button" parent="CanvasLayer/mapa_p2/pasilloB" unique_id=745595016]
+offset_left = 3.0
+offset_top = 3.9999695
+offset_right = 42.0
+offset_bottom = 36.99997
+icon = ExtResource("10_lclgx")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_p2/pasilloB/pasilloB" unique_id=2012133468]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="centroB" type="Node2D" parent="CanvasLayer/mapa_p2" unique_id=951258138]
+position = Vector2(882, 435)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_p2/centroB" unique_id=1451291300]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="centroB" type="Button" parent="CanvasLayer/mapa_p2/centroB" unique_id=1136841283]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("11_f5nly")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_p2/centroB/centroB" unique_id=1357525285]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="salon" type="Node2D" parent="CanvasLayer/mapa_p2" unique_id=1193105228]
+position = Vector2(949, 541)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_p2/salon" unique_id=1297121045]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="salon" type="Button" parent="CanvasLayer/mapa_p2/salon" unique_id=1791810991]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("12_lifeq")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_p2/salon/salon" unique_id=90091381]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="cubiculosB" type="Node2D" parent="CanvasLayer/mapa_p2" unique_id=2107998973]
+position = Vector2(749, 460)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_p2/cubiculosB" unique_id=20043043]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="cubiculosB" type="Button" parent="CanvasLayer/mapa_p2/cubiculosB" unique_id=1560554171]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("13_258q1")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_p2/cubiculosB/cubiculosB" unique_id=891230396]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="escaleras" type="Node2D" parent="CanvasLayer/mapa_p2" unique_id=745816994]
+position = Vector2(824, 595)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_p2/escaleras" unique_id=1041501412]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="escaleras" type="Button" parent="CanvasLayer/mapa_p2/escaleras" unique_id=263960872]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("14_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_p2/escaleras/escaleras" unique_id=1718420802]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="mapa_v" type="Node2D" parent="CanvasLayer" unique_id=1276771016]
+visible = false
+
+[node name="mapa" type="Sprite2D" parent="CanvasLayer/mapa_v" unique_id=69862929]
+position = Vector2(888.87494, 493)
+scale = Vector2(0.5382681, 0.47386762)
+texture = ExtResource("15_f5nly")
+
+[node name="vent1A" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=1708866828]
+position = Vector2(1037, 411.00003)
+scale = Vector2(1, 0.99999994)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1A" unique_id=59378241]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent1A" type="Button" parent="CanvasLayer/mapa_v/vent1A" unique_id=461838011]
+offset_left = 2.0
+offset_top = 3.9999695
+offset_right = 41.0
+offset_bottom = 36.99997
+icon = ExtResource("16_lifeq")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1A/vent1A" unique_id=760024233]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent2A" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=1048363750]
+position = Vector2(849, 382)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2A" unique_id=574601121]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent2A" type="Button" parent="CanvasLayer/mapa_v/vent2A" unique_id=1042591257]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("17_258q1")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2A/vent2A" unique_id=1394192578]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent1B" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=138456327]
+position = Vector2(921, 467)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1B" unique_id=859724445]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent1B" type="Button" parent="CanvasLayer/mapa_v/vent1B" unique_id=228371221]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("18_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1B/vent1B" unique_id=109047646]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent2B" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=873728195]
+position = Vector2(786, 466)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2B" unique_id=2068160191]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent2B" type="Button" parent="CanvasLayer/mapa_v/vent2B" unique_id=385733014]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("19_a2lpo")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2B/vent2B" unique_id=997909499]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent1C" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=2065255010]
+position = Vector2(1013, 566)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1C" unique_id=1170995567]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent1C" type="Button" parent="CanvasLayer/mapa_v/vent1C" unique_id=1733877726]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("20_258q1")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent1C/vent1C" unique_id=221602313]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent2C" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=765583936]
+position = Vector2(828, 610)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2C" unique_id=1134976838]
+position = Vector2(21.500025, 20.499971)
+scale = Vector2(0.6833341, 0.8250008)
+texture = ExtResource("2_erexk")
+
+[node name="vent2C" type="Button" parent="CanvasLayer/mapa_v/vent2C" unique_id=412396653]
+offset_left = 2.0
+offset_top = 3.5
+offset_right = 41.0
+offset_bottom = 36.5
+icon = ExtResource("21_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/vent2C/vent2C" unique_id=1641309341]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(19.499973, 16.499992)
+scale = Vector2(0.68333244, 0.82500046)
+texture = ExtResource("4_hrmmp")
+
+[node name="botones" type="Node2D" parent="CanvasLayer/mapa_v" unique_id=1267594458]
+
+[node name="vent_close1A" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=627640976]
+position = Vector2(1083, 460)
+rotation = 1.5682387
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1A" unique_id=1972887030]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close1A" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close1A" unique_id=1509285848]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1A/vent_close1A" unique_id=2044215749]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent_close2A" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=2079565886]
+position = Vector2(912, 378)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2A" unique_id=913425480]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close2A" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close2A" unique_id=1363198092]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2A/vent_close2A" unique_id=1606761644]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent_close1B" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=545447191]
+position = Vector2(986, 464)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1B" unique_id=936717919]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close1B" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close1B" unique_id=802012932]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1B/vent_close1B" unique_id=455226454]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent_close2B" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=1076837622]
+position = Vector2(842, 464)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2B" unique_id=1563911899]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close2B" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close2B" unique_id=1428287003]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2B/vent_close2B" unique_id=674470259]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent_close1C" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=1582300370]
+position = Vector2(1072, 562)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1C" unique_id=1284259594]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close1C" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close1C" unique_id=1059139610]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close1C/vent_close1C" unique_id=624658494]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent_close2C" type="Node2D" parent="CanvasLayer/mapa_v/botones" unique_id=182096120]
+position = Vector2(893, 605)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2C" unique_id=2044888225]
+position = Vector2(5.000017, 23.999962)
+scale = Vector2(0.13333383, 1.0000002)
+texture = ExtResource("2_erexk")
+
+[node name="vent_close2C" type="Button" parent="CanvasLayer/mapa_v/botones/vent_close2C" unique_id=265645865]
+offset_left = -15.0
+offset_top = 4.0
+offset_right = 25.0
+offset_bottom = 44.0
+icon = ExtResource("22_0jtun")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/mapa_v/botones/vent_close2C/vent_close2C" unique_id=1913436733]
+position = Vector2(20.000021, 19.499985)
+scale = Vector2(0.13333479, 0.9750001)
+texture = ExtResource("4_hrmmp")
+
+[node name="botones" type="Node2D" parent="CanvasLayer" unique_id=317108841]
+
+[node name="salir_camaras" type="Button" parent="CanvasLayer/botones" unique_id=1384775063]
+offset_left = 103.0
+offset_top = 579.0
+offset_right = 711.0
+offset_bottom = 647.0
+icon = ExtResource("15_erexk")
+flat = true
+
+[node name="piso1" type="Node2D" parent="CanvasLayer/botones" unique_id=459978153]
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/botones/piso1" unique_id=1985123274]
+position = Vector2(875.99994, 338)
+scale = Vector2(1.2666667, 1.0499994)
+texture = ExtResource("2_erexk")
+
+[node name="piso1" type="Button" parent="CanvasLayer/botones/piso1" unique_id=1638831820]
+offset_left = 840.0
+offset_top = 318.0
+offset_right = 912.0
+offset_bottom = 358.0
+icon = ExtResource("16_hrmmp")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/botones/piso1/piso1" unique_id=1077910038]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(36, 20.249985)
+scale = Vector2(1.2333332, 0.98750013)
+texture = ExtResource("4_hrmmp")
+
+[node name="piso2" type="Node2D" parent="CanvasLayer/botones" unique_id=860998959]
+position = Vector2(84, 0)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/botones/piso2" unique_id=747052628]
+position = Vector2(875.99994, 338)
+scale = Vector2(1.2666667, 1.0499994)
+texture = ExtResource("2_erexk")
+
+[node name="piso2" type="Button" parent="CanvasLayer/botones/piso2" unique_id=1813585308]
+offset_left = 840.0
+offset_top = 318.0
+offset_right = 912.0
+offset_bottom = 358.0
+icon = ExtResource("17_284yy")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/botones/piso2/piso2" unique_id=1750613781]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(36, 20.249985)
+scale = Vector2(1.2333332, 0.98750013)
+texture = ExtResource("4_hrmmp")
+
+[node name="vent" type="Node2D" parent="CanvasLayer/botones" unique_id=1355173966]
+position = Vector2(168, 0)
+
+[node name="border" type="Sprite2D" parent="CanvasLayer/botones/vent" unique_id=593586035]
+position = Vector2(875.99994, 338)
+scale = Vector2(1.2666667, 1.0499994)
+texture = ExtResource("2_erexk")
+
+[node name="vent" type="Button" parent="CanvasLayer/botones/vent" unique_id=1268604699]
+offset_left = 840.0
+offset_top = 318.0
+offset_right = 912.0
+offset_bottom = 358.0
+icon = ExtResource("18_284yy")
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/botones/vent/vent" unique_id=1813158330]
+visible = false
+modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(36, 20.249985)
+scale = Vector2(1.2333332, 0.98750013)
+texture = ExtResource("4_hrmmp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1350699144]
+stream = ExtResource("27_a2lpo")
