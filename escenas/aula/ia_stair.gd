@@ -1,13 +1,13 @@
 
 extends Node
 
-@onready var armario = get_node("../../../../../armario")
-@onready var izq = get_node("../../../../../izq")
-@onready var aula = $"../../../../../"
-@onready var puerta_animaciones: AnimatedSprite2D = $"../../../../../izq/animaciones/izq"
-@onready var energia = $"../../../../../vista/sistema_energia"
+@onready var armario = get_node("../../../../../../armario")
+@onready var izq = get_node("../../../../../../izq")
+@onready var aula = $"../../../../../../"
+@onready var puerta_animaciones: AnimatedSprite2D = $"../../../../../../izq/animaciones/izq"
+@onready var energia = $"../../../../../../vista/sistema_energia"
 @onready var timer: Timer = $Timer
-@onready var transicion = $"../../../../../TransicionNegro"
+@onready var transicion = $"../../../../../../TransicionNegro"
 
 var posicion: String = "centroA"
 var posicion_anterior: String = ""
@@ -25,6 +25,7 @@ var stair2_activado: bool = false
 
 
 func _ready() -> void:
+
 	add_to_group("ia_stair")
 	tiempo_movimiento = timer.wait_time
 	ActualizarAnimacion()
@@ -39,6 +40,7 @@ func moverse() -> void:
 	posicion_anterior = posicion
 
 	match posicion:
+
 		"centroA":
 			posicion = ["pasilloA", "escaleras", "escaleras"].pick_random()
 
@@ -93,9 +95,11 @@ func _on_timer_timeout() -> void:
 # --------------------------------
 
 func _esperar(segundos: float) -> void:
+
 	timer.stop()
 	timer.wait_time = segundos
 	timer.start()
+
 	await timer.timeout
 
 
@@ -116,26 +120,36 @@ func llegar_a_puerta() -> void:
 
 	timer.stop()
 
+	if is_instance_valid(armario):
+		armario.desactivar_detector_stair3()
+
 	inicio_ataque = Time.get_ticks_msec() / 1000.0
 
 	# Registrar entrada al armario
+
 	if aula.en_armario:
 		armario.tiempo_entrada = inicio_ataque
 	else:
 		armario.tiempo_entrada = -1.0
 
 	# Bloquear controles
+
 	if is_instance_valid(izq):
 		izq.bloquear_controles(true)
 
 	# Abrir puerta si estaba cerrada
+
 	if aula.puerta:
+
 		aula.puerta = false
 		Global.puerta_cerrada = false
+
 		print("stair abrio la puerta")
+
 		energia.actualizar_consumo()
 
 	# Comprobar perspectiva antes de cambiarla
+
 	var estaba_mirando_izq = izq.is_visible_in_tree()
 
 	# =================================
@@ -144,10 +158,8 @@ func llegar_a_puerta() -> void:
 
 	if aula.en_armario:
 
-		# No mostrar Stair en el aula
 		izq.anima_en_aula = false
 
-		# Mostrar Stair1 dentro del armario
 		armario.reproducir_stair("stair1")
 
 	# =================================
@@ -165,7 +177,6 @@ func llegar_a_puerta() -> void:
 			await transicion.aclarar()
 			return
 
-		# Mostrar Stair en la puerta
 		izq.anima_en_aula = true
 		izq.mostrar_stair_estatico()
 
@@ -180,6 +191,7 @@ func llegar_a_puerta() -> void:
 		izq.anima_en_aula = true
 
 	# Mostrar vista izquierda
+
 	if not aula.en_armario and is_instance_valid(izq):
 		izq.vista()
 
@@ -192,14 +204,17 @@ func llegar_a_puerta() -> void:
 	if jumpscare_activado or not ataque_activo:
 		return
 
-	# Ya estaba dentro del armario
+	# =================================
+	# COMPROBAR ENTRADA AL ARMARIO
+	# =================================
+
 	if aula.en_armario:
 
 		var entrada: float = armario.tiempo_entrada - inicio_ataque
 
 		if entrada < 3.0:
 
-			await _esperar(3.0)
+			await _esperar(1.5)
 
 			if jumpscare_activado or not ataque_activo:
 				return
@@ -208,7 +223,12 @@ func llegar_a_puerta() -> void:
 				jumpscare()
 				return
 
+			await transicion.oscurecer()
+
 			retirarse()
+
+			await transicion.aclarar()
+
 			return
 
 	# =================================
@@ -231,26 +251,41 @@ func llegar_a_puerta() -> void:
 	# =================================
 
 	if randf() < 0.5:
+
+		await transicion.oscurecer()
+
 		retirarse()
+
+		await transicion.aclarar()
+
 		return
 
+	# =================================
+	# ACTIVAR STAIR 3
+	# =================================
+
 	if is_instance_valid(armario):
+
 		armario.reproducir_stair("stair3")
+		armario.activar_detector_stair3()
 
 	# =================================
-	# 3 SEGUNDOS DE STAIR 3
+	# VIGILAR CONTACTO STAIR 3
 	# =================================
 
-	await _esperar(3.0)
+	await vigilar_stair3()
 
 	if jumpscare_activado or not ataque_activo:
 		return
 
-	if not aula.en_armario:
-		jumpscare()
-		return
+	# Stair se retira si las áreas se separaron
+
+	await transicion.oscurecer()
 
 	retirarse()
+
+	await transicion.aclarar()
+
 
 # --------------------------------
 # ACTIVAR STAIR 2
@@ -281,16 +316,20 @@ func registrar_entrada_armario() -> void:
 	print("Stair: jugador entró al armario.")
 	print("Tiempo transcurrido: ", tiempo_entrada)
 
-	# Entró antes de los 3 segundos: mostrar Stair 1
+	# Entró antes de los 3 segundos
+
 	if tiempo_entrada >= 0.0 and tiempo_entrada < 3.0:
 
 		print("Mostrando STAIR 1 dentro del armario.")
+
 		armario.reproducir_stair("stair1")
 
-	# Entró entre los 3 y 6 segundos: mostrar Stair 2
+	# Entró entre los 3 y 6 segundos
+
 	elif tiempo_entrada >= 3.0 and tiempo_entrada < 6.0:
 
 		print("Mostrando STAIR 2 dentro del armario.")
+
 		activar_stair2()
 
 
@@ -301,7 +340,9 @@ func registrar_entrada_armario() -> void:
 func registrar_salida_armario() -> void:
 
 	if ataque_activo and not jumpscare_activado:
+
 		print("¡Saliste del armario durante el ataque!")
+
 		jumpscare()
 
 
@@ -314,6 +355,9 @@ func retirarse() -> void:
 	if jumpscare_activado:
 		return
 
+	if is_instance_valid(armario):
+		armario.desactivar_detector_stair3()
+
 	ataque_activo = false
 	en_puerta = false
 	esperando_en_puerta = false
@@ -323,6 +367,7 @@ func retirarse() -> void:
 	timer.stop()
 
 	if is_instance_valid(izq):
+
 		izq.anima_en_aula = false
 		izq.vista()
 		izq.bloquear_controles(false)
@@ -330,7 +375,9 @@ func retirarse() -> void:
 	if is_instance_valid(armario):
 
 		if armario.animacion_armario.animation == "stair3":
+
 			armario.reproducir_stair_reversa()
+
 			await armario.animacion_armario.animation_finished
 
 		armario.anima_en_aula = false
@@ -349,7 +396,6 @@ func retirarse() -> void:
 # JUMPSCARE
 # --------------------------------
 
-
 func jumpscare() -> void:
 
 	if jumpscare_activado:
@@ -366,22 +412,25 @@ func jumpscare() -> void:
 
 	Global.noche_en_curso = false
 
-	# Detener temporizador de Stair
 	timer.stop()
 
-	# Detener el temporizador de energía
+	# Detener energía
+
 	if is_instance_valid(energia):
+
 		energia.timer.stop()
 
-		# Ocultar batería
 		energia.bateria.hide()
 
-		# Ocultar porcentaje
 		energia.digito1.hide()
 		energia.digito2.hide()
 
-		# Ocultar filtro de energía
 		energia.filtro_negro.hide()
+
+	# Desactivar detectores
+
+	if is_instance_valid(armario):
+		armario.desactivar_detector_stair3()
 
 	# =================================
 	# REPRODUCIR JUMPSCARE
@@ -391,14 +440,97 @@ func jumpscare() -> void:
 
 	$jumpscare.show()
 	$jumpscare.play()
+
 	$"../IA_Whites/grito".play()
-	
+
 	await $jumpscare.animation_finished
 
 	# =================================
 	# GAME OVER
 	# =================================
 
+	if not is_inside_tree():
+		return
+
 	get_tree().change_scene_to_file(
 		"res://escenas/game_over/game_over.tscn"
 	)
+
+
+# =================================
+# MECÁNICA DE CONTACTO STAIR 3
+# =================================
+
+func vigilar_stair3() -> void:
+
+	if not is_instance_valid(armario):
+		return
+
+	timer.stop()
+
+	# Guardar configuración original
+
+	var modo_original: bool = timer.one_shot
+
+	# Activar modo de una sola ejecución
+
+	timer.one_shot = true
+
+	var habia_contacto: bool = false
+
+	while ataque_activo and not jumpscare_activado:
+
+		await get_tree().process_frame
+
+		if not is_inside_tree():
+			return
+
+		var contacto: bool = armario.stair3_hay_contacto()
+
+		# =================================
+		# LAS ÁREAS COMIENZAN A TOCARSE
+		# =================================
+
+		if contacto and not habia_contacto:
+
+			print("¡Stair está alcanzando al jugador!")
+
+			timer.stop()
+			timer.wait_time = 3.0
+			timer.start()
+
+		# =================================
+		# LAS ÁREAS SE SEPARAN
+		# =================================
+
+		elif not contacto and habia_contacto:
+
+			print("¡Lograste escapar de Stair!")
+
+			timer.stop()
+			timer.one_shot = modo_original
+
+			return
+
+		habia_contacto = contacto
+
+		# =================================
+		# TERMINÓ EL TIEMPO DE CONTACTO
+		# =================================
+
+		if habia_contacto and timer.is_stopped():
+
+			print("¡No lograste escapar de Stair!")
+
+			timer.one_shot = modo_original
+
+			jumpscare()
+
+			return
+
+	# =================================
+	# RESTAURAR CONFIGURACIÓN
+	# =================================
+
+	timer.stop()
+	timer.one_shot = modo_original

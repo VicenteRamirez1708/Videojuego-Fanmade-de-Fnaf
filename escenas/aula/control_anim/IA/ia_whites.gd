@@ -1,9 +1,9 @@
 
 extends Node
 
-@onready var luces = get_node("../../../../../izq")
-@onready var aula = get_node("../../../../../")
-@onready var puerta_animaciones = get_node("../../../../../izq/animaciones/izq")
+@onready var luces = get_node("../../../../../../izq")
+@onready var aula = get_node("../../../../../../")
+@onready var puerta_animaciones = get_node("../../../../../../izq/animaciones/izq")
 
 var en_puerta: bool = false
 var esperando: bool = false
@@ -154,25 +154,8 @@ func _cerca() -> void:
 
 func jumpscare() -> void:
 
-	# Detener la noche
-	Global.noche_en_curso = false
-
 	# Detener el temporizador de Whites
 	$Timer.stop()
-
-	# Detener el sistema de energía
-	var energia = aula.get_node_or_null("vista/sistema_energia")
-
-	if energia:
-		energia.timer.stop()
-
-		# Ocultar batería y porcentaje
-		energia.bateria.hide()
-		energia.digito1.hide()
-		energia.digito2.hide()
-
-		# Ocultar filtro de energía si está activo
-		energia.filtro_negro.hide()
 
 	# Reproducir jumpscare
 	$jumpscare.show()
@@ -180,6 +163,8 @@ func jumpscare() -> void:
 	$grito.play()
 
 	await $jumpscare.animation_finished
+
+	Global.noche_en_curso = false
 
 	print("¡JUMPSCARE DE WHITES!")
 

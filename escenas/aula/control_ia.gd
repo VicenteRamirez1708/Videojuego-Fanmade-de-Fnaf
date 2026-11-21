@@ -3,20 +3,20 @@ extends Node
 
 @onready var stair = $IA_Stair
 @onready var whites = $IA_Whites
-@onready var forkor = $CanvasLayer/IA_Forkor
+@onready var forkor = $IA_Forkor
 
 var camaras = {}
 
 func _ready() -> void:
 
 	camaras = {
-		"cubiculosA": $"../cubiculosA/AnimatedSprite2D",
-		"centroA": $"../centroA/AnimatedSprite2D",
-		"escaleras": $"../escaleras/AnimatedSprite2D",
-		"centroB": $"../centroB/AnimatedSprite2D",
-		"salon": $"../salon/AnimatedSprite2D",
-		"pasilloB": $"../pasilloB/AnimatedSprite2D",
-		"pasilloA": $"../pasilloA/AnimatedSprite2D"
+		"cubiculosA": $"../../cubiculosA/AnimatedSprite2D",
+		"centroA": $"../../centroA/AnimatedSprite2D",
+		"escaleras": $"../../escaleras/AnimatedSprite2D",
+		"centroB": $"../../centroB/AnimatedSprite2D",
+		"salon": $"../../salon/AnimatedSprite2D",
+		"pasilloB": $"../../pasilloB/AnimatedSprite2D",
+		"pasilloA": $"../../pasilloA/AnimatedSprite2D"
 	}
 
 	actualizar_todas_las_camaras()

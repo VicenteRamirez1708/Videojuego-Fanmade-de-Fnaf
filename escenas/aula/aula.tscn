@@ -84,6 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://pv4804ckewjt" path="res://assets/animatronicos/forkor/jumpscare/0018.png" id="73_es3ru"]
 [ext_resource type="Texture2D" uid="uid://dh5deuswomlh4" path="res://assets/animatronicos/forkor/jumpscare/0019.png" id="74_ckek0"]
 [ext_resource type="Texture2D" uid="uid://4whfd0tj8brl" path="res://assets/animatronicos/forkor/jumpscare/0020.png" id="75_ij61i"]
+[ext_resource type="AudioStream" uid="uid://dmt1dfa2tiy4y" path="res://assets/animatronicos/forkor/sound/grito.wav" id="76_r0i6b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dvvmi"]
 animations = [{
@@ -393,7 +394,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"default",
-"speed": 15.0
+"speed": 20.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
@@ -453,36 +454,36 @@ animation = &"default"
 [node name="AnimatedSprite2D" parent="frent/camaras/control_anim/centroB" parent_id_path=PackedInt32Array(51489153, 606052587, 327666283) index="0" unique_id=1233008513]
 animation = &"whites"
 
-[node name="controlIA" type="Node" parent="frent/camaras/control_anim" parent_id_path=PackedInt32Array(51489153, 606052587) index="17" unique_id=537927549]
+[node name="CanvasLayer" type="CanvasLayer" parent="frent/camaras/control_anim" parent_id_path=PackedInt32Array(51489153, 606052587) index="17" unique_id=1674168191]
+
+[node name="controlIA" type="Node" parent="frent/camaras/control_anim/CanvasLayer" unique_id=537927549]
 script = ExtResource("6_6okyd")
 
-[node name="IA_Whites" type="Node" parent="frent/camaras/control_anim/controlIA" unique_id=283164076]
+[node name="IA_Whites" type="Node" parent="frent/camaras/control_anim/CanvasLayer/controlIA" unique_id=283164076]
 script = ExtResource("6_v4req")
 
-[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1085207512]
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites" unique_id=1085207512]
 wait_time = 5.0
 autostart = true
 
-[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1337262588]
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites" unique_id=1337262588]
 visible = false
 position = Vector2(576, 324)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_4oyo5")
-frame = 23
-frame_progress = 1.0
 
-[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/controlIA/IA_Whites" unique_id=1109760932]
+[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites" unique_id=1109760932]
 stream = ExtResource("32_lop53")
 volume_db = 24.0
 
-[node name="IA_Stair" type="Node" parent="frent/camaras/control_anim/controlIA" unique_id=289119311]
+[node name="IA_Stair" type="Node" parent="frent/camaras/control_anim/CanvasLayer/controlIA" unique_id=289119311]
 script = ExtResource("7_y4fp4")
 
-[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=223972993]
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Stair" unique_id=223972993]
 wait_time = 5.0
 autostart = true
 
-[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=1529318669]
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Stair" unique_id=1529318669]
 visible = false
 position = Vector2(576.00006, 324)
 scale = Vector2(0.6, 0.6000001)
@@ -490,24 +491,23 @@ sprite_frames = SubResource("SpriteFrames_yf5fn")
 frame = 27
 frame_progress = 1.0
 
-[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/controlIA/IA_Stair" unique_id=1837538863]
+[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Stair" unique_id=1837538863]
 stream = ExtResource("54_i83e1")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="frent/camaras/control_anim/controlIA" unique_id=1674168191]
-
-[node name="IA_Forkor" type="Node" parent="frent/camaras/control_anim/controlIA/CanvasLayer" unique_id=1601127597]
+[node name="IA_Forkor" type="Node" parent="frent/camaras/control_anim/CanvasLayer/controlIA" unique_id=1601127597]
 script = ExtResource("55_ixs52")
 
-[node name="Timer" type="Timer" parent="frent/camaras/control_anim/controlIA/CanvasLayer/IA_Forkor" unique_id=1952216579]
+[node name="Timer" type="Timer" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Forkor" unique_id=1952216579]
 autostart = true
 
-[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/controlIA/CanvasLayer/IA_Forkor" unique_id=1763351719]
+[node name="jumpscare" type="AnimatedSprite2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Forkor" unique_id=1763351719]
 visible = false
 position = Vector2(575.99994, 324.00006)
 scale = Vector2(0.6, 0.6)
 sprite_frames = SubResource("SpriteFrames_57qmd")
-frame = 27
-frame_progress = 1.0
+
+[node name="grito" type="AudioStreamPlayer2D" parent="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Forkor" unique_id=534197077]
+stream = ExtResource("76_r0i6b")
 
 [node name="Ambiente" type="AudioStreamPlayer2D" parent="." unique_id=1065023109]
 stream = ExtResource("5_yhjp5")
@@ -613,9 +613,9 @@ label_settings = SubResource("LabelSettings_g4v7s")
 
 [node name="TransicionNegro" parent="." unique_id=134365581 instance=ExtResource("42_uv57b")]
 
-[connection signal="button_down" from="izq/boton/btn_luz" to="frent/camaras/control_anim/controlIA/IA_Whites" method="_on_btn_luz_button_down"]
-[connection signal="timeout" from="frent/camaras/control_anim/controlIA/IA_Whites/Timer" to="frent/camaras/control_anim/controlIA/IA_Whites" method="_on_timer_timeout"]
-[connection signal="timeout" from="frent/camaras/control_anim/controlIA/IA_Stair/Timer" to="frent/camaras/control_anim/controlIA/IA_Stair" method="_on_timer_timeout"]
+[connection signal="button_down" from="izq/boton/btn_luz" to="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites" method="_on_btn_luz_button_down"]
+[connection signal="timeout" from="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites/Timer" to="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Whites" method="_on_timer_timeout"]
+[connection signal="timeout" from="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Stair/Timer" to="frent/camaras/control_anim/CanvasLayer/controlIA/IA_Stair" method="_on_timer_timeout"]
 [connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent1A/vent1A" to="frent/camaras/control_anim" method="_on_vent_1a_pressed"]
 [connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent2A/vent2A" to="frent/camaras/control_anim" method="_on_vent_2a_pressed"]
 [connection signal="pressed" from="frent/camaras/mapa/CanvasLayer/mapa_v/vent1B/vent1B" to="frent/camaras/control_anim" method="_on_vent_1b_pressed"]

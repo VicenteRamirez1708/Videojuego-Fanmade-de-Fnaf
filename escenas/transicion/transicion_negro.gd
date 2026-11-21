@@ -6,13 +6,11 @@ extends Node2D
 
 func _ready() -> void:
 	canvas.hide()
-	fondo.color = Color(0, 0, 0, 0)
 	canvas.layer = 100
 
 
 func oscurecer() -> void:
 	canvas.show()
-	fondo.color = Color(0, 0, 0, 0)
 
 	animacion.play("cerrar")
 	await animacion.animation_finished

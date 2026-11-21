@@ -214,33 +214,33 @@ func iniciar_noche(numero: int) -> void:
 
 		1:
 			dificultad = 0
-			consumo_niveles = [0.10, 0.20, 0.30, 0.40]
+			consumo_niveles = [0.20, 0.40, 0.50, 0.60]
 
 		2:
 			dificultad = 2
-			consumo_niveles = [0.20, 0.30, 0.40, 0.50]
+			consumo_niveles = [0.22, 0.42, 0.52, 0.62]
 
 		3:
 			dificultad = 4
-			consumo_niveles = [0.30, 0.40, 0.50, 0.60]
+			consumo_niveles = [0.24, 0.44, 0.54, 0.64]
 
 		4:
 			dificultad = 6
-			consumo_niveles = [0.40, 0.50, 0.60, 0.70]
+			consumo_niveles = [0.26, 0.46, 0.56, 0.66]
 
 		5:
 			dificultad = 8
-			consumo_niveles = [0.50, 0.60, 0.70, 0.80]
+			consumo_niveles = [0.28, 0.48, 0.58, 0.68]
 
 		6:
 			dificultad = 10
-			consumo_niveles = [0.60, 0.70, 0.80, 0.90]
+			consumo_niveles = [0.30, 0.50, 0.60, 0.70]
 
 	energia_inicial = 99.0
 	energia_actual = energia_inicial
 
 	# Dificultad inicial de los animatrónicos
-	dificultad_animatronicos["stair"] = dificultad
+	dificultad_animatronicos["stair"] = 20
 	dificultad_animatronicos["whites"] = dificultad
 	dificultad_animatronicos["forkor"] = dificultad
 

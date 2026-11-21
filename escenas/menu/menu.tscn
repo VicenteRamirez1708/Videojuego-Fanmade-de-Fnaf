@@ -72,8 +72,8 @@
 [ext_resource type="Texture2D" uid="uid://dvf6nmhmcbjk" path="res://assets/menu/blip/blip flash 14.png" id="69_3mh0c"]
 [ext_resource type="Texture2D" uid="uid://d3i2aorjod4vo" path="res://assets/menu/blip/blip flash 15.png" id="70_7d44c"]
 [ext_resource type="Texture2D" uid="uid://dwt8780xi3odt" path="res://assets/menu/blip/blip flash 16.png" id="71_nyk27"]
+[ext_resource type="Texture2D" uid="uid://cx4qc1gi6qesm" path="res://assets/menu/set.png" id="73_h7ilt"]
 [ext_resource type="FontFile" uid="uid://640xa0ppa6vs" path="res://assets/fonts/NTBrickSans.ttf" id="74_h7ilt"]
-[ext_resource type="Texture2D" uid="uid://cmkspbopfa5sm" path="res://assets/1-MAIN_TEXT/SET_.png" id="75_4onkx"]
 [ext_resource type="AudioStream" uid="uid://ekexbkjn77hv" path="res://assets/Audio/S4.wav" id="76_c81ty"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccryh"]
@@ -369,13 +369,15 @@ flat = true
 
 [node name="Set" type="Sprite2D" parent="." unique_id=1913266739]
 visible = false
-position = Vector2(85, 404)
-texture = ExtResource("75_4onkx")
+modulate = Color(1, 1, 1, 0.7529412)
+position = Vector2(117, 403)
+texture = ExtResource("73_h7ilt")
 
 [node name="Set2" type="Sprite2D" parent="." unique_id=352895918]
 visible = false
-position = Vector2(85, 501)
-texture = ExtResource("75_4onkx")
+modulate = Color(1, 1, 1, 0.7529412)
+position = Vector2(116, 499)
+texture = ExtResource("73_h7ilt")
 
 [node name="Label" type="Label" parent="." unique_id=825258398]
 offset_left = 81.0

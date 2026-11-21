@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://mwxnmo358ojm" path="res://assets/mapa/botones_camaras/CAM_3B.png" id="12_lifeq"]
 [ext_resource type="Texture2D" uid="uid://dscnsfk11uxad" path="res://assets/mapa/botones_camaras/CAM_4B.png" id="13_258q1"]
 [ext_resource type="Texture2D" uid="uid://bbo0dufcfvkhm" path="res://assets/mapa/botones_camaras/CAM_5.png" id="14_0jtun"]
-[ext_resource type="Texture2D" uid="uid://dttl22n5g5q5y" path="res://assets/Escritorio Frames/0-FLIP.png" id="15_erexk"]
 [ext_resource type="Texture2D" uid="uid://1tggajnrms2h" path="res://assets/mapa/vent.png" id="15_f5nly"]
 [ext_resource type="Texture2D" uid="uid://d322opy5osgd5" path="res://assets/mapa/botones/PISO1.png" id="16_hrmmp"]
 [ext_resource type="Texture2D" uid="uid://cund05gojw4up" path="res://assets/mapa/botones_camaras/VENT_1A.png" id="16_lifeq"]
@@ -26,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://n878sydn83vq" path="res://assets/mapa/botones_camaras/VENT_1C.png" id="20_258q1"]
 [ext_resource type="Texture2D" uid="uid://da8lflmx2u1an" path="res://assets/mapa/botones_camaras/VENT_2C.png" id="21_0jtun"]
 [ext_resource type="Texture2D" uid="uid://d0ty88brsl7cx" path="res://assets/mapa/botones/VENT_CLOSE.png" id="22_0jtun"]
+[ext_resource type="Texture2D" uid="uid://dir287mjg6sgd" path="res://assets/Escritorio Frames/FLIP.png" id="23_a2lpo"]
 [ext_resource type="AudioStream" uid="uid://kfljn0rdriin" path="res://assets/Audio/SoundTracks/Cambio de camara.wav" id="27_a2lpo"]
 
 [node name="mapa" type="Node2D" unique_id=1633312089]
@@ -563,11 +563,12 @@ texture = ExtResource("4_hrmmp")
 [node name="botones" type="Node2D" parent="CanvasLayer" unique_id=317108841]
 
 [node name="salir_camaras" type="Button" parent="CanvasLayer/botones" unique_id=1384775063]
+modulate = Color(1, 1, 1, 0.627451)
 offset_left = 103.0
 offset_top = 579.0
 offset_right = 711.0
 offset_bottom = 647.0
-icon = ExtResource("15_erexk")
+icon = ExtResource("23_a2lpo")
 flat = true
 
 [node name="piso1" type="Node2D" parent="CanvasLayer/botones" unique_id=459978153]

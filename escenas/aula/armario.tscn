@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ddjyvscmfvfwv" path="res://escenas/aula/armario.gd" id="1_jurbw"]
 [ext_resource type="Texture2D" uid="uid://bi6o1ajox2p8f" path="res://assets/Escritorio Frames/Armario_Escena2.png" id="2_4qbrq"]
-[ext_resource type="Texture2D" uid="uid://dttl22n5g5q5y" path="res://assets/Escritorio Frames/0-FLIP.png" id="2_jurbw"]
 [ext_resource type="Texture2D" uid="uid://cu07a7da2cbxw" path="res://assets/Escritorio Frames/Armario_Stairs/SPhase1.png" id="3_4qbrq"]
 [ext_resource type="Texture2D" uid="uid://42aj0ytp3st8" path="res://assets/Escritorio Frames/Armario_Stairs/SPhase2.png" id="4_6x87d"]
 [ext_resource type="Texture2D" uid="uid://c7sbvxn2y5de8" path="res://assets/Escritorio Frames/Armario_Salir/ArmOFF_1.png" id="4_rkxu0"]
@@ -29,6 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://cj55qtrq5js2o" path="res://assets/Escritorio Frames/Armario_Stairs/SMec11.png" id="15_a0p76"]
 [ext_resource type="Texture2D" uid="uid://dnvx0wm6jwmp8" path="res://assets/Escritorio Frames/Armario_Stairs/SMec12.png" id="16_7q5q5"]
 [ext_resource type="Texture2D" uid="uid://pq8fdif12og1" path="res://assets/Escritorio Frames/Armario_Stairs/SMec13.png" id="17_to33y"]
+[ext_resource type="Texture2D" uid="uid://dir287mjg6sgd" path="res://assets/Escritorio Frames/FLIP.png" id="29_4qbrq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(190.875, 185.75)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
 animations = [{
@@ -101,6 +104,8 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_d0u6y"]
 animations = [{
 "frames": [{
@@ -149,7 +154,7 @@ size = Vector2(204, 562.25)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_jurbw")
+"texture": ExtResource("29_4qbrq")
 }],
 "loop": 1,
 "name": &"default",
@@ -182,12 +187,27 @@ position = Vector2(0, 2)
 [node name="Camera2D" type="Camera2D" parent="camara" unique_id=1311737900]
 position = Vector2(577, 325)
 
+[node name="Area2D_jugador" type="Area2D" parent="camara" unique_id=2044147895]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="camara/Area2D_jugador" unique_id=1433244094]
+position = Vector2(585, 323)
+shape = SubResource("RectangleShape2D_d0u6y")
+
 [node name="animaciones" type="Node2D" parent="." unique_id=583464256]
 
 [node name="armario" type="AnimatedSprite2D" parent="animaciones" unique_id=709653946]
 position = Vector2(627, 325.5)
 scale = Vector2(0.65208334, 0.6027777)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"stair3"
+
+[node name="Area2D_stair" type="Area2D" parent="animaciones/armario" unique_id=918688458]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="animaciones/armario/Area2D_stair" unique_id=84700395]
+position = Vector2(-61.34185, 2.4884796)
+shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="salir" type="AnimatedSprite2D" parent="animaciones" unique_id=1859498392]
 visible = false
@@ -219,6 +239,7 @@ visible = false
 [node name="Area2D" type="Area2D" parent="boton" unique_id=677070644]
 
 [node name="boton" type="AnimatedSprite2D" parent="boton/Area2D" unique_id=1968060652]
+modulate = Color(1, 1, 1, 0.627451)
 position = Vector2(586, 603)
 sprite_frames = SubResource("SpriteFrames_57qmd")
 

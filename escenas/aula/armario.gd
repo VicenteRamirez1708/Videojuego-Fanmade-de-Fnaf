@@ -27,6 +27,14 @@ var der: bool = false
 # Interfaz
 @onready var interfaz_armario = $boton
 
+@onready var area_jugador: Area2D = $camara/Area2D_jugador
+@onready var area_stair: Area2D = $animaciones/armario/Area2D_stair
+
+@onready var colision_jugador: CollisionShape2D = $camara/Area2D_jugador/CollisionShape2D
+@onready var colision_stair: CollisionShape2D = $animaciones/armario/Area2D_stair/CollisionShape2D
+
+var stair3_activo: bool = false
+
 # Variables
 var posicion_inicial_camara: Vector2
 
@@ -40,6 +48,13 @@ var tiempo_entrada: float = -1.0
 
 
 func _ready() -> void:
+
+	colision_jugador.set_deferred("disabled", true)
+	colision_stair.set_deferred("disabled", true)
+
+	area_jugador.collision_mask = 2
+	area_jugador.monitoring = true
+	area_stair.monitorable = true
 
 	posicion_inicial_camara = camara.position
 
@@ -276,3 +291,40 @@ func reproducir_stair_reversa() -> void:
 	if animacion_armario.animation == "stair3":
 		animacion_armario.stop()
 		animacion_armario.play_backwards("stair3")
+		
+# =====================================
+# ACTIVAR DETECTORES DE STAIR 3
+# =====================================
+
+func activar_detector_stair3() -> void:
+
+	stair3_activo = true
+
+	colision_jugador.set_deferred("disabled", false)
+	colision_stair.set_deferred("disabled", false)
+
+	print("Detectores de Stair 3 activados.")
+
+
+# =====================================
+# DESACTIVAR DETECTORES
+# =====================================
+
+func desactivar_detector_stair3() -> void:
+
+	stair3_activo = false
+
+	colision_jugador.set_deferred("disabled", true)
+	colision_stair.set_deferred("disabled", true)
+
+
+# =====================================
+# COMPROBAR CONTACTO
+# =====================================
+
+func stair3_hay_contacto() -> bool:
+
+	if not stair3_activo:
+		return false
+
+	return area_jugador.overlaps_area(area_stair)
